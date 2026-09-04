@@ -3,71 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>الدكتورة ملك | Study Dashboard</title>
 
-  <link rel="stylesheet" href="style.css" />
-
+  <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
   <div class="stars"></div>
 
   <!-- القائمة الجانبية -->
   <aside class="sidebar">
-
     <div class="brand">
       <div class="brand-icon">🎓</div>
       <span>الدكتورة ملك</span>
     </div>
 
     <nav class="menu">
-
-      <button class="nav-item active" data-section="home">
-        <span>⌂</span>
-        الرئيسية
-      </button>
-
-      <button class="nav-item" data-section="sessions">
-        <span>♡</span>
-        جلسات المذاكرة
-      </button>
-
-      <button class="nav-item" data-section="stats">
-        <span>▥</span>
-        إحصائيات
-      </button>
-
-      <button class="nav-item" data-section="tasks">
-        <span>✓</span>
-        مهام اليوم
-      </button>
-
-      <button class="nav-item" data-section="schedule">
-        <span>▣</span>
-        جدول الدراسة
-      </button>
-
-      <button class="nav-item" data-section="notes">
-        <span>▤</span>
-        الملاحظات
-      </button>
-
-      <button class="nav-item" data-section="music">
-        <span>♫</span>
-        الموسيقى الهادئة
-      </button>
-
-      <button class="nav-item" data-section="prayer">
-        <span>☪</span>
-        الأذان الهادئ
-      </button>
-
+      <button class="nav-item active" data-section="home"><span>⌂</span> الرئيسية</button>
+      <button class="nav-item" data-section="sessions"><span>♡</span> جلسات المذاكرة</button>
+      <button class="nav-item" data-section="stats"><span>▥</span> إحصائيات</button>
+      <button class="nav-item" data-section="tasks"><span>✓</span> مهام اليوم</button>
+      <button class="nav-item" data-section="notes"><span>▤</span> الملاحظات</button>
+      <button class="nav-item" data-section="prayer"><span>☪</span> الأذان الهادئ</button>
     </nav>
 
     <div class="sidebar-quote">
@@ -76,497 +36,219 @@
       <div>♥</div>
     </div>
 
-    <button class="settings-btn" id="settingsBtn">
-      ⚙ الإعدادات
-    </button>
-
+    <button class="settings-btn" id="settingsBtn">⚙ الإعدادات</button>
   </aside>
 
-
-  <!-- المحتوى -->
+  <!-- المحتوى الرئيسي -->
   <main class="main-content">
 
     <!-- الهيدر -->
     <header class="topbar">
-
       <div class="title-area">
-        <h1>الدكتورة ملك <span>♛</span></h1>
-        <p>رحلتك نحو التفوق تبدأ من هنا ✨</p>
+        <h1 id="pageTitle">الدكتورة ملك <span>♛</span></h1>
+        <p id="pageSubTitle">رحلتك نحو التفوق تبدأ من هنا ✨</p>
       </div>
 
       <div class="top-actions">
-
-        <button class="icon-btn" id="notificationBtn">
-          🔔
-        </button>
-
+        <button class="icon-btn" id="notificationBtn">🔔</button>
         <div class="profile">
           <div class="profile-crown">♛</div>
           <span>ملك</span>
           <span class="arrow">⌄</span>
         </div>
-
       </div>
-
     </header>
 
+    <!-- 1. الرئيسية -->
+    <section id="home" class="page-section active">
+      <div class="dashboard-grid">
+        <div class="left-column">
 
-    <!-- الصفحة -->
-    <section class="dashboard-grid">
-
-      <!-- العمود الرئيسي -->
-      <div class="left-column">
-
-        <!-- التايمر -->
-        <section class="timer-card glass-card">
-
-          <div class="timer-background"></div>
-
-          <div class="timer-header">
-            <h2>🧠 جلسة مذاكرة مركزة</h2>
-          </div>
-
-          <div class="timer-circle">
-
-            <svg class="progress-ring" width="280" height="280">
-
-              <circle
-                class="progress-bg"
-                cx="140"
-                cy="140"
-                r="118"
-              />
-
-              <circle
-                class="progress-bar"
-                cx="140"
-                cy="140"
-                r="118"
-              />
-
-            </svg>
-
-            <div class="timer-content">
-              <div id="timer">45:00</div>
-              <span>دقيقة</span>
+          <!-- المؤقت -->
+          <section class="timer-card glass-card">
+            <div class="timer-background"></div>
+            <div class="timer-header">
+              <h2>🧠 جلسة مذاكرة مركزة</h2>
             </div>
 
-          </div>
-
-
-          <div class="session-label" id="sessionName">
-            جلسة تركيز
-          </div>
-
-
-          <div class="timer-controls">
-
-            <button class="control-btn" id="resetBtn">
-              ↻
-            </button>
-
-            <button class="play-btn" id="startBtn">
-              ▶
-            </button>
-
-            <button class="control-btn" id="stopBtn">
-              ■
-            </button>
-
-          </div>
-
-
-          <div class="timer-modes">
-
-            <button class="mode-btn active" data-time="2700" data-name="جلسة تركيز">
-              🧠
-              <span>جلسة تركيز</span>
-              <small>45 دقيقة</small>
-            </button>
-
-            <button class="mode-btn" data-time="300" data-name="استراحة قصيرة">
-              ☕
-              <span>استراحة قصيرة</span>
-              <small>5 دقائق</small>
-            </button>
-
-            <button class="mode-btn" data-time="900" data-name="استراحة طويلة">
-              ☕
-              <span>استراحة طويلة</span>
-              <small>15 دقيقة</small>
-            </button>
-
-          </div>
-
-        </section>
-
-
-        <!-- رسالة ملك -->
-        <section class="motivation-card">
-
-          <div class="motivation-decoration">♡</div>
-
-          <div class="motivation-content">
-
-            <div class="small-hearts">♡ ✦ ♡</div>
-
-            <h2>يارب ملك تجيب <span>100%</span></h2>
-
-            <p id="mainMotivation">
-              لأنك قدها، وأنتِ قادرة تحققي كل اللي بتحلمي بيه
-            </p>
-
-            <div class="heart-line">
-              ─────── ♡ ───────
+            <div class="timer-circle">
+              <svg class="progress-ring" width="280" height="280">
+                <circle class="progress-bg" cx="140" cy="140" r="118"/>
+                <circle class="progress-bar" id="progressBar" cx="140" cy="140" r="118"/>
+              </svg>
+              <div class="timer-content">
+                <div id="timerDisplay">45:00</div>
+                <span>دقيقة</span>
+              </div>
             </div>
 
-          </div>
+            <div class="session-label" id="sessionName">جلسة تركيز</div>
 
-        </section>
-
-
-        <!-- الإحصائيات -->
-        <section class="stats-card glass-card">
-
-          <div class="section-title">
-
-            <h2>إحصائياتك 📈</h2>
-
-            <select id="weekSelect">
-              <option>هذا الأسبوع</option>
-              <option>الأسبوع الماضي</option>
-            </select>
-
-          </div>
-
-
-          <div class="stats-content">
-
-            <div class="stat-box">
-              <span>إجمالي الوقت</span>
-              <strong id="totalStudyTime">0 س</strong>
-              <small>هذا الأسبوع</small>
+            <div class="timer-controls">
+              <button class="control-btn" id="resetBtn">↻</button>
+              <button class="play-btn" id="startBtn">▶</button>
+              <button class="control-btn" id="stopBtn">■</button>
             </div>
 
-            <div class="stat-box">
-              <span>عدد الجلسات</span>
-              <strong id="sessionsCount">0</strong>
-              <small>هذا الأسبوع</small>
+            <div class="timer-modes">
+              <button class="mode-btn active" data-time="2700" data-name="جلسة تركيز">
+                🧠 <span>جلسة تركيز</span> <small>45 دقيقة</small>
+              </button>
+              <button class="mode-btn" data-time="300" data-name="استراحة قصيرة">
+                ☕ <span>استراحة قصيرة</span> <small>5 دقائق</small>
+              </button>
+              <button class="mode-btn" data-time="900" data-name="استراحة طويلة">
+                ☕ <span>استراحة طويلة</span> <small>15 دقيقة</small>
+              </button>
             </div>
+          </section>
 
-            <div class="stat-box">
-              <span>أطول سلسلة</span>
-              <strong>7</strong>
-              <small>أيام متتالية 🔥</small>
+          <!-- رسالة تحفيزية مميزة -->
+          <section class="motivation-card">
+            <div class="motivation-decoration">♡</div>
+            <div class="motivation-content">
+              <div class="small-hearts">♡ ✦ I LOVE YOU ✦ ♡</div>
+              <h2>I Love You <span>Dr. Malak</span> ❤️</h2>
+              <p>يارب ملك تجيب 100%، لأنك قدها وقادرة تحققي كل اللي بتحلمي بيه ✨</p>
+              <div class="heart-line">─────── ♡ ───────</div>
             </div>
+          </section>
+        </div>
 
-            <div class="stat-box">
-              <span>المهام المنجزة</span>
-              <strong id="completedTasks">0</strong>
-              <small>استمري يا ملك</small>
+        <div class="right-column">
+          <!-- ملخص جلسات اليوم -->
+          <section class="today-sessions glass-card">
+            <div class="section-title">
+              <h2>جلسات اليوم</h2>
+              <button class="new-session-btn" id="quickNewSessionBtn">+ جديدة</button>
             </div>
-
-          </div>
-
-
-          <div class="chart">
-
-            <div class="chart-bars">
-
-              <div class="bar-item">
-                <div class="bar" style="height:55%"></div>
-                <span>السبت</span>
-              </div>
-
-              <div class="bar-item">
-                <div class="bar" style="height:70%"></div>
-                <span>الأحد</span>
-              </div>
-
-              <div class="bar-item">
-                <div class="bar" style="height:90%"></div>
-                <span>الإثنين</span>
-              </div>
-
-              <div class="bar-item">
-                <div class="bar" style="height:75%"></div>
-                <span>الثلاثاء</span>
-              </div>
-
-              <div class="bar-item">
-                <div class="bar" style="height:45%"></div>
-                <span>الأربعاء</span>
-              </div>
-
-              <div class="bar-item">
-                <div class="bar" style="height:65%"></div>
-                <span>الخميس</span>
-              </div>
-
-              <div class="bar-item">
-                <div class="bar" style="height:50%"></div>
-                <span>الجمعة</span>
-              </div>
-
+            <div class="sessions-list" id="homeSessionsList"></div>
+            <div class="today-total">
+              <span>◷ إجمالي الوقت المحفوظ</span>
+              <strong id="homeTotalStudyTime">0 دقيقة</strong>
             </div>
-
-          </div>
-
-        </section>
-
+          </section>
+        </div>
       </div>
-
-
-      <!-- العمود اليمين -->
-      <div class="right-column">
-
-
-        <!-- جلسات اليوم -->
-        <section class="today-sessions glass-card">
-
-          <div class="section-title">
-
-            <h2>جلسات اليوم</h2>
-
-            <button class="new-session-btn" id="newSessionBtn">
-              + جلسة جديدة
-            </button>
-
-          </div>
-
-
-          <div class="sessions-list" id="sessionsList">
-
-            <div class="session-item">
-              <button class="session-play">▶</button>
-              <span class="session-time">09:00 ص</span>
-              <strong>رياضيات</strong>
-              <span class="done">✓</span>
-            </div>
-
-            <div class="session-item">
-              <button class="session-play">▶</button>
-              <span class="session-time">11:00 ص</span>
-              <strong>فيزياء</strong>
-              <span class="done">✓</span>
-            </div>
-
-            <div class="session-item">
-              <button class="session-play">▶</button>
-              <span class="session-time">01:00 م</span>
-              <strong>كيمياء</strong>
-              <span class="waiting">◷</span>
-            </div>
-
-            <div class="session-item">
-              <button class="session-play">▶</button>
-              <span class="session-time">03:00 م</span>
-              <strong>أحياء</strong>
-              <span class="waiting">◷</span>
-            </div>
-
-          </div>
-
-
-          <div class="today-total">
-            <span>◷ إجمالي وقت اليوم</span>
-            <strong id="todayTotal">0 س 0 د</strong>
-          </div>
-
-        </section>
-
-
-        <!-- رسالة اليوم -->
-        <section class="daily-message glass-card">
-
-          <h2>❝ رسالة اليوم ❞</h2>
-
-          <div class="message-box">
-
-            <button id="prevMessage">‹</button>
-
-            <div>
-              <p id="dailyMessage">
-                النجاح ليس صدفة، هو نتيجة لجهد يومي صغير يتكرر.
-              </p>
-
-              <span>♥</span>
-            </div>
-
-            <button id="nextMessage">›</button>
-
-          </div>
-
-        </section>
-
-
-        <!-- الأذان -->
-        <section class="prayer-card">
-
-          <div class="prayer-bg"></div>
-
-          <div class="prayer-header">
-            <h2>🌙 أذان هادئ</h2>
-          </div>
-
-
-          <div class="prayer-info">
-
-            <span id="nextPrayerName">جاري تحميل المواقيت...</span>
-
-            <strong id="nextPrayerTime">--:--</strong>
-
-            <small id="prayerCountdown">
-              جاري تحديد موقعك...
-            </small>
-
-          </div>
-
-
-          <div class="prayer-controls">
-
-            <button id="enablePrayerSound">
-              🔔 تفعيل تنبيهات وأصوات الصلاة
-            </button>
-
-          </div>
-
-
-          <div class="prayer-volume">
-
-            <span>🔊</span>
-
-            <input
-              type="range"
-              id="adhanVolume"
-              min="0"
-              max="1"
-              step="0.1"
-              value="0.8"
-            />
-
-          </div>
-
-
-          <div class="prayer-times-mini">
-
-            <span>الفجر <b id="fajrTime">--:--</b></span>
-            <span>الظهر <b id="dhuhrTime">--:--</b></span>
-            <span>العصر <b id="asrTime">--:--</b></span>
-            <span>المغرب <b id="maghribTime">--:--</b></span>
-            <span>العشاء <b id="ishaTime">--:--</b></span>
-
-          </div>
-
-        </section>
-
-
-        <!-- المهام -->
-        <section class="tasks-card glass-card">
-
-          <div class="section-title">
-            <h2>مهام اليوم ✓</h2>
-          </div>
-
-          <div id="tasksList"></div>
-
-          <div class="add-task">
-
-            <input
-              type="text"
-              id="taskInput"
-              placeholder="أضيفي مهمة جديدة..."
-            >
-
-            <button id="addTaskBtn">
-              +
-            </button>
-
-          </div>
-
-        </section>
-
-      </div>
-
     </section>
 
-
-    <!-- الملاحظات -->
-    <section class="notes-section glass-card">
-
-      <div class="section-title">
-        <h2>📝 ملاحظاتي</h2>
-      </div>
-
-      <textarea
-        id="notes"
-        placeholder="اكتبي كل أفكارك وملاحظاتك هنا يا دكتورة ملك..."
-      ></textarea>
-
-      <div class="notes-footer">
-        <span id="saveStatus">يتم الحفظ تلقائياً</span>
-
-        <button id="clearNotes">
-          مسح الملاحظات
-        </button>
-      </div>
-
+    <!-- 2. قسم جلسات المذاكرة -->
+    <section id="sessions" class="page-section" style="display: none;">
+      <section class="today-sessions glass-card">
+        <div class="section-title">
+          <h2>جدول الجلسات والدروس</h2>
+          <button class="new-session-btn" id="openModalBtn">+ إضافة مادة / درس</button>
+        </div>
+        <div class="sessions-list" id="fullSessionsList"></div>
+      </section>
     </section>
 
+    <!-- 3. قسم الإحصائيات -->
+    <section id="stats" class="page-section" style="display: none;">
+      <section class="stats-card glass-card">
+        <div class="section-title">
+          <h2>إحصائياتك 📈</h2>
+        </div>
+        <div class="stats-content">
+          <div class="stat-box">
+            <span>إجمالي وقت الدراسة</span>
+            <strong id="totalStudyTime">0 دقيقة</strong>
+          </div>
+          <div class="stat-box">
+            <span>عدد الجلسات المضافة</span>
+            <strong id="sessionsCount">0</strong>
+          </div>
+          <div class="stat-box">
+            <span>المهام المنجزة</span>
+            <strong id="completedTasksStats">0</strong>
+          </div>
+        </div>
+      </section>
+    </section>
 
-    <!-- الشريط السفلي -->
+    <!-- 4. قسم المهام -->
+    <section id="tasks" class="page-section" style="display: none;">
+      <section class="tasks-card glass-card">
+        <div class="section-title">
+          <h2>مهام اليوم ✓</h2>
+        </div>
+        <div id="tasksList"></div>
+        <div class="add-task">
+          <input type="text" id="taskInput" placeholder="أضيفي مهمة جديدة..." />
+          <button id="addTaskBtn">+</button>
+        </div>
+      </section>
+    </section>
+
+    <!-- 5. قسم الملاحظات -->
+    <section id="notes" class="page-section" style="display: none;">
+      <section class="notes-section glass-card">
+        <div class="section-title">
+          <h2>📝 ملاحظاتي</h2>
+        </div>
+        <textarea id="notesArea" placeholder="اكتبي كل أفكارك وملاحظاتك هنا يا دكتورة ملك..."></textarea>
+        <div class="notes-footer">
+          <span id="saveStatus">يتم الحفظ تلقائياً</span>
+          <button id="clearNotesBtn">مسح الملاحظات</button>
+        </div>
+      </section>
+    </section>
+
+    <!-- 6. قسم مواقيت الصلاة -->
+    <section id="prayer" class="page-section" style="display: none;">
+      <section class="prayer-card">
+        <div class="prayer-bg"></div>
+        <div class="prayer-header">
+          <h2>🌙 مواقيت الصلاة والأذان</h2>
+        </div>
+
+        <div class="prayer-info">
+          <span id="nextPrayerName">جاري تحديد الموقع والمواقيت...</span>
+          <strong id="nextPrayerTime">--:--</strong>
+          <small id="prayerCountdown"></small>
+        </div>
+
+        <div class="prayer-controls" style="margin-top: 15px;">
+          <button id="enableAudioBtn">🔔 تفعيل صوت الأذان تلقائياً</button>
+        </div>
+
+        <div class="prayer-times-mini" id="prayerTimesGrid" style="margin-top: 20px;">
+          <span>الفجر <b id="fajrTime">--:--</b></span>
+          <span>الظهر <b id="dhuhrTime">--:--</b></span>
+          <span>العصر <b id="asrTime">--:--</b></span>
+          <span>المغرب <b id="maghribTime">--:--</b></span>
+          <span>العشاء <b id="ishaTime">--:--</b></span>
+        </div>
+      </section>
+    </section>
+
     <footer class="footer-quote">
       ✨ استمرّي اليوم، فخورة بيكي الآن وغداً ستكوني فخورة بنفسك أكثر ❤️ ✨
     </footer>
-
   </main>
-
-
-  <!-- صوت الأذان -->
-  <!-- ضعي ملف صوت باسم adhan.mp3 داخل مجلد assets/audio -->
-  <audio id="adhanAudio" preload="auto">
-    <source src="assets/audio/adhan.mp3" type="audio/mpeg">
-  </audio>
-
-
-  <!-- صوت انتهاء جلسة -->
-  <audio id="finishAudio" preload="auto">
-    <source src="assets/audio/finish.mp3" type="audio/mpeg">
-  </audio>
-
 
   <!-- نافذة إضافة جلسة -->
   <div class="modal" id="sessionModal">
-
     <div class="modal-content">
-
       <button class="close-modal" id="closeModal">×</button>
-
       <h2>إضافة جلسة جديدة ✨</h2>
-
-      <input
-        type="text"
-        id="subjectInput"
-        placeholder="اسم المادة"
-      >
-
-      <input
-        type="time"
-        id="sessionTimeInput"
-      >
-
-      <button id="saveSessionBtn">
-        حفظ الجلسة
-      </button>
-
+      <input type="text" id="subjectInput" placeholder="اسم المادة (فيزياء، كيمياء...)" />
+      <input type="time" id="sessionTimeInput" />
+      <button id="saveSessionBtn">حفظ الجلسة</button>
     </div>
-
   </div>
 
+  <!-- صوت الأذان (رابط مباشر) -->
+  <audio id="adhanAudio" preload="auto">
+    <source src="https://cdn.islamicfinder.org/adhan/makkah.mp3" type="audio/mpeg">
+  </audio>
 
-  <script src="script.js"></script>
-  <script src="prayer.js"></script>
-  <script src="audio.js"></script>
-
+  <!-- الملفات البرمجية -->
+  <script src="js/app.js"></script>
+  <script src="js/timer.js"></script>
+  <script src="js/tasks.js"></script>
+  <script src="js/notes.js"></script>
+  <script src="js/sessions.js"></script>
+  <script src="js/prayer.js"></script>
 </body>
-  </html>
+</html>
