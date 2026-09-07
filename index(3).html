@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#061326">
+<title>الدكتورة ملك | ثالثة ثانوي علمي علوم</title>
+<style>
+:root{
+ --nav:#061225;--bg:#f3f7fc;--card:#fff;--ink:#10213d;--muted:#6c7c95;--line:#dbe5f1;
+ --blue:#246bff;--cyan:#18b6d9;--green:#12b981;--purple:#7448ff;--orange:#ff9f2e;--red:#ef5367;
+ --darkCard:#0a1a33;--shadow:0 12px 35px rgba(13,35,67,.11);--r:18px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+button,input,textarea,select{font:inherit}button{cursor:pointer}.app{min-height:100vh}
+.sidebar{position:fixed;right:0;top:0;bottom:0;width:250px;background:linear-gradient(180deg,#061225,#0b1d3b);color:#fff;padding:15px 12px;z-index:50;overflow:auto;border-left:1px solid #ffffff14}
+.brand{display:flex;align-items:center;gap:10px;padding:7px 8px 16px;border-bottom:1px solid #ffffff13}.brandAvatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#f7c948,#ff6cbd);display:grid;place-items:center;color:#111;font-weight:900}.brand b{font-size:16px}.brand small{display:block;color:#9fb1cc;margin-top:3px}
+.nav{padding-top:10px}.nav button{width:100%;background:transparent;border:0;color:#d8e4f7;text-align:right;padding:11px 12px;border-radius:12px;margin:2px 0;display:flex;align-items:center;gap:10px}.nav button:hover,.nav button.active{background:linear-gradient(90deg,#246bff35,#7448ff25);color:#fff}.nav .label{flex:1}
+.main{margin-right:250px;min-height:100vh;padding:16px 20px 30px}.topbar{height:58px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:25;background:rgba(243,247,252,.9);backdrop-filter:blur(12px)}
+.search{flex:1;max-width:610px;border:1px solid var(--line);background:#fff;border-radius:13px;padding:11px 14px;outline:0}.search:focus{border-color:var(--blue)}.mobile{display:none;background:#fff;border:1px solid var(--line);border-radius:11px;padding:9px 12px}
+.page{display:none}.page.active{display:block}.hero{border-radius:25px;overflow:hidden;min-height:310px;position:relative;color:#fff;background:linear-gradient(90deg,#061326d9,#07182cd1),url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1800&q=85") center/cover;box-shadow:var(--shadow)}
+.heroInner{padding:35px;max-width:850px}.tag{display:inline-flex;padding:7px 11px;border-radius:999px;background:#ffffff16;border:1px solid #ffffff22;font-size:12px}.hero h1{font-size:clamp(30px,4.2vw,52px);margin:15px 0 8px}.hero p{line-height:1.9;color:#dce8f8}.gold{color:#ffd45a}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.btn{border:0;border-radius:11px;padding:10px 15px;background:linear-gradient(135deg,#246bff,#7448ff);color:#fff;font-weight:800}.btn.secondary{background:#fff;color:var(--ink);border:1px solid var(--line)}.btn.dark{background:#0b1c35}.btn.green{background:linear-gradient(135deg,#0da67a,#17c998)}.btn.red{background:#fff1f2;color:#c93649;border:1px solid #ffd0d5}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:16px}.grid4{grid-template-columns:repeat(4,1fr)}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:17px;box-shadow:var(--shadow)}.darkCard{background:linear-gradient(145deg,#0a1a33,#102747);color:#fff;border:1px solid #203c62}
+.stat{display:flex;justify-content:space-between;align-items:center;gap:12px}.num{font-size:30px;font-weight:900}.muted{color:var(--muted)}.darkCard .muted{color:#aebed5}.small{font-size:12px}.section{margin-top:20px}.sectionTitle{display:flex;justify-content:space-between;align-items:center;gap:10px}.sectionTitle h2{margin:0}.icon{font-size:32px}.progress{height:8px;background:#e9eef6;border-radius:99px;overflow:hidden}.progress i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,#246bff,#7448ff)}
+.subject{min-height:220px;color:#fff;position:relative;overflow:hidden;background-size:cover;background-position:center}.subject:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#071426e8,#0714268f)}.subject>*{position:relative;z-index:1}.physics{background-image:url("https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=1200&q=80")}.chem{background-image:url("https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1200&q=80")}.bio{background-image:url("https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&w=1200&q=80")}.arabic{background-image:url("https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1200&q=80")}.english{background-image:url("https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1200&q=80")}.subject .subjectIcon{font-size:45px}.subject h2{font-size:25px;margin:8px 0}.subject p{color:#dbe6f5}
+.tabs{display:flex;gap:7px;flex-wrap:wrap;margin:13px 0}.tabs button{background:#fff;border:1px solid var(--line);padding:9px 12px;border-radius:10px;color:#344765}.tabs button.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.lessonRow{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px;border:1px solid var(--line);border-radius:13px;background:#fbfdff;margin:8px 0}.lessonLeft{display:flex;align-items:center;gap:10px}.lessonNo{width:39px;height:39px;border-radius:11px;background:#edf3ff;color:#246bff;display:grid;place-items:center;font-weight:900}.done{color:var(--green);font-weight:900}
+.chapter{border:1px solid var(--line);border-radius:15px;margin:10px 0;overflow:hidden;background:#fff}.chapterHead{padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:10px;background:linear-gradient(90deg,#f8fbff,#fff)}.chapterBody{padding:0 15px 15px}.chapterTitle{font-weight:900}
+.explain{line-height:1.95;color:#40536f}.law{font-family:"Courier New",monospace;direction:ltr;text-align:center;background:#07152a;color:#eaf2ff;border:1px solid #27456f;border-radius:12px;padding:13px;margin:10px 0;font-size:18px}.note{background:#fff8df;border-right:4px solid #ffc83d;padding:12px;border-radius:10px;color:#6a5310}.note.blue{background:#edf5ff;border-color:#4f8cff;color:#294b83}.note.green{background:#edfff8;border-color:#17b98a;color:#166b55}
+textarea.noteInput{width:100%;min-height:110px;border:1px solid var(--line);border-radius:12px;padding:12px;outline:0;resize:vertical}.select{width:100%;border:1px solid var(--line);border-radius:11px;background:#fff;padding:10px}
+.timerBox{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.timer{text-align:center}.clock{width:250px;height:250px;border-radius:50%;margin:12px auto 18px;border:10px solid #e5ebf5;display:grid;place-items:center;box-shadow:inset 0 0 35px #0b1b3420}.time{font-size:56px;font-weight:900;color:#132847}.quote{font-weight:900;color:#6f45e9;margin-top:12px}
+.question{font-size:18px;font-weight:900;line-height:1.8}.answer{width:100%;text-align:right;background:#fff;border:1px solid var(--line);border-radius:11px;padding:12px;margin:7px 0}.answer.selected{border-color:#246bff;background:#edf4ff}.answer.correct{border-color:#13b982;background:#edfff8}.answer.wrong{border-color:#ef5367;background:#fff1f2}.score{font-size:68px;font-weight:900;color:#246bff;text-align:center}
+.tableWrap{overflow:auto}.schedule{width:100%;border-collapse:separate;border-spacing:6px;min-width:760px}.schedule th,.schedule td{padding:12px;background:#f8fbff;border:1px solid var(--line);border-radius:8px;text-align:center}
+.prayerRow{display:flex;align-items:center;justify-content:space-between;padding:12px 5px;border-bottom:1px solid #edf1f7}.prayerRow.next{background:#edf5ff;border-radius:10px;color:#1752b8}.audio{width:100%;margin-top:8px}.mind{min-height:400px;position:relative;overflow:hidden;background:radial-gradient(circle at center,#eaf2ff,#fff 62%)}.mindCenter{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:125px;height:125px;border-radius:50%;background:linear-gradient(135deg,#246bff,#7448ff);color:#fff;display:grid;place-items:center;text-align:center;font-weight:900;box-shadow:0 0 45px #246bff40}.node{position:absolute;padding:12px 16px;background:#fff;border:2px solid #dce7f6;border-radius:13px;box-shadow:var(--shadow);min-width:140px;text-align:center}.n1{right:8%;top:13%}.n2{left:8%;top:13%}.n3{right:8%;bottom:13%}.n4{left:8%;bottom:13%}.n5{left:50%;top:6%;transform:translateX(-50%)}.n6{left:50%;bottom:6%;transform:translateX(-50%)}
+.barChart{height:170px;display:flex;align-items:flex-end;gap:8px;padding:10px 4px}.bar{flex:1;background:linear-gradient(180deg,#7448ff,#246bff);border-radius:7px 7px 2px 2px;min-height:4px;position:relative}.bar span{position:absolute;bottom:-22px;right:50%;transform:translateX(50%);font-size:10px;color:var(--muted)}
+.toast{position:fixed;bottom:20px;left:20px;background:#0b1c35;color:#fff;border-radius:11px;padding:12px 15px;z-index:100;display:none;box-shadow:var(--shadow)}
+.footer{text-align:center;color:#8292a9;padding:25px}.hidden{display:none!important}
+@media(max-width:1050px){.grid4{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr 1fr}.timerBox{grid-template-columns:1fr}}
+@media(max-width:760px){.sidebar{transform:translateX(100%);transition:.25s}.sidebar.open{transform:translateX(0)}.main{margin-right:0;padding:10px}.mobile{display:block}.grid,.grid4{grid-template-columns:1fr}.topbar{position:static}.heroInner{padding:22px}.mind{min-height:480px}.node{min-width:105px;padding:9px;font-size:12px}.n1{right:3%;top:14%}.n2{left:3%;top:14%}.n3{right:3%;bottom:14%}.n4{left:3%;bottom:14%}.n5{top:4%}.n6{bottom:4%}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar" id="sidebar">
+ <div class="brand"><div class="brandAvatar">م</div><div><b>الدكتورة ملك 👑</b><small>ثالثة ثانوي • علمي علوم</small></div></div>
+ <nav class="nav">
+  <button class="active" data-page="home">🏠 <span class="label">الرئيسية</span></button>
+  <button data-page="subjects">📚 <span class="label">المواد والمنهج</span></button>
+  <button data-page="chapters">🗂️ <span class="label">الفصول والدروس</span></button>
+  <button data-page="laws">⚗️ <span class="label">القوانين والمعادلات</span></button>
+  <button data-page="maps">🧠 <span class="label">الخرائط الذهنية</span></button>
+  <button data-page="bank">📝 <span class="label">بنك الأسئلة</span></button>
+  <button data-page="exams">🏆 <span class="label">الامتحانات</span></button>
+  <button data-page="timer">⏱️ <span class="label">عداد المذاكرة</span></button>
+  <button data-page="schedule">📅 <span class="label">جدول المذاكرة</span></button>
+  <button data-page="prayer">🕌 <span class="label">الأذان والصلاة</span></button>
+  <button data-page="notes">🗒️ <span class="label">ملاحظاتي</span></button>
+  <button data-page="progress">📊 <span class="label">متابعتي</span></button>
+ </nav>
+</aside>
+
+<main class="main">
+ <div class="topbar"><button class="mobile" onclick="toggleSide()">☰</button><input id="search" class="search" placeholder="ابحثي في الدروس والقوانين والأسئلة..."><div class="brandAvatar">م</div></div>
+
+<section id="home" class="page active">
+ <div class="hero"><div class="heroInner">
+  <span class="tag">👑 منصة الدكتورة ملك • دفعة ثالثة ثانوي علمي علوم</span>
+  <h1>بالعلم... <span class="gold">نصنع مستقبل أفضل</span></h1>
+  <p>منصة مذاكرة مصممة لتالتة ثانوي علمي علوم: المنهج، الفصول، شرح مبسط، القوانين، بنك الأسئلة، امتحان كل درس، خرائط ذهنية، مؤقت، متابعة، وأذان يتحدث يوميًا.</p>
+  <div class="actions"><button class="btn" onclick="showPage('subjects')">ابدئي المنهج 🚀</button><button class="btn dark" onclick="showPage('timer')">ابدئي جلسة مذاكرة ⏱️</button></div>
+ </div></div>
+
+ <div class="grid grid4">
+  <div class="card stat"><div><div class="muted">إجمالي المذاكرة</div><div class="num" id="sMinutes">0 د</div></div><span class="icon">⏱️</span></div>
+  <div class="card stat"><div><div class="muted">دروس مكتملة</div><div class="num" id="sDone">0</div></div><span class="icon">✅</span></div>
+  <div class="card stat"><div><div class="muted">متوسط الاختبارات</div><div class="num" id="sAvg">0%</div></div><span class="icon">🏆</span></div>
+  <div class="card stat"><div><div class="muted">الإنجاز</div><div class="num" id="sPercent">0%</div></div><span class="icon">📈</span></div>
+ </div>
+
+ <div class="section sectionTitle"><h2>مواد تالتة ثانوي علمي علوم</h2><span class="muted small">بدون رياضيات</span></div>
+ <div id="homeSubjects" class="grid grid4"></div>
+
+ <div class="grid">
+  <div class="darkCard card"><h2>⏳ عداد اليوم</h2><div class="num" id="todayMinutes">0 دقيقة</div><p class="muted">هدف اليوم 120 دقيقة</p><div class="progress"><i id="todayBar"></i></div></div>
+  <div class="card"><h2>💬 رسالة ملك اليوم</h2><p id="dailyQuote" class="muted">كل سؤال بتحليه النهارده بيقربك من الدرجة اللي نفسك فيها.</p></div>
+  <div class="card"><h2>🕌 الصلاة القادمة</h2><p id="nextPrayerHome" class="muted">جاري حساب المواقيت...</p><button class="btn secondary" onclick="showPage('prayer')">مواقيت الصلاة</button></div>
+ </div>
+</section>
+
+<section id="subjects" class="page">
+ <h1>📚 المواد</h1><p class="muted">المنهج الرئيسي للصف الثالث الثانوي علمي علوم. تم ترتيب الفيزياء والكيمياء والأحياء وفق فهارس المنهج المنشورة، مع مواد اللغة العربية والإنجليزية كمسارات مساندة.</p>
+ <div id="subjectGrid" class="grid"></div>
+</section>
+
+<section id="chapters" class="page">
+ <h1>🗂️ الفصول والدروس</h1><p class="muted">اختاري المادة ثم الفصل ثم الدرس. لكل درس شرح، نقاط مهمة، قانون/قاعدة، ملاحظات، وأسئلة امتحان.</p>
+ <div id="chapterTabs" class="tabs"></div><div id="chapterList"></div>
+</section>
+
+<section id="laws" class="page">
+ <h1>⚗️ القوانين والمعادلات</h1><p class="muted">مرجع سريع للقوانين المهمة في المنهج.</p>
+ <div id="lawTabs" class="tabs"></div><div id="lawList"></div>
+</section>
+
+<section id="maps" class="page">
+ <h1>🧠 الخرائط الذهنية</h1><p class="muted">خريطة تلخص كل مادة بطريقة بصرية.</p>
+ <div id="mapTabs" class="tabs"></div><div id="mind" class="card mind"></div>
+</section>
+
+<section id="bank" class="page">
+ <h1>📝 بنك الأسئلة</h1><p class="muted">فلترة حسب المادة والفصل والدرس، ثم حل سؤال عشوائي.</p>
+ <div class="card"><div class="grid">
+  <select id="bankSubject" class="select"></select><select id="bankChapter" class="select"></select><select id="bankLesson" class="select"></select>
+ </div><div class="actions"><button class="btn" onclick="randomQuestion()">سؤال عشوائي 🎲</button><button class="btn secondary" onclick="bankAll()">عرض بنك الأسئلة</button></div></div>
+ <div id="bankBox" class="section"></div>
+</section>
+
+<section id="exams" class="page">
+ <h1>🏆 الامتحانات</h1><p class="muted">امتحان لكل درس + امتحان لكل فصل + امتحان شامل للمادة، مع تصحيح تلقائي.</p>
+ <div id="examCards" class="grid"></div><div id="examBox" class="card section hidden"></div>
+</section>
+
+<section id="timer" class="page">
+ <h1>⏱️ عداد المذاكرة</h1>
+ <div class="timerBox">
+  <div class="card timer"><div class="muted">جلسة مذاكرة</div><select id="timerLesson" class="select"></select>
+   <div class="clock"><div><div class="time" id="timerDisplay">50:00</div><div class="muted">المتبقي</div></div></div>
+   <div class="actions" style="justify-content:center"><button class="btn" id="timerBtn" onclick="toggleTimer()">ابدئي</button><button class="btn secondary" onclick="resetTimer()">إعادة</button><button class="btn secondary" onclick="preset(25)">25 دقيقة</button><button class="btn secondary" onclick="preset(50)">50 دقيقة</button></div>
+   <div class="quote" id="timerQuote">صلي على النبي ﷺ ❤️</div>
+  </div>
+  <div class="card"><h2>📊 وقتك</h2><div class="stat"><span>الإجمالي</span><b id="timerTotal">0 دقيقة</b></div><hr><div class="stat"><span>جلسات مكتملة</span><b id="timerSessions">0</b></div><hr><div class="stat"><span>وقت الدرس المحدد</span><b id="lessonTime">0 دقيقة</b></div><div class="note blue" style="margin-top:15px">كل دقيقة تشغيل تُسجل على الدرس المختار وتدخل في المتابعة.</div></div>
+ </div>
+</section>
+
+<section id="schedule" class="page">
+ <h1>📅 جدول المذاكرة</h1><div class="card tableWrap"><table class="schedule"><thead><tr><th>اليوم</th><th>الجلسة 1</th><th>الجلسة 2</th><th>الجلسة 3</th><th>المراجعة</th></tr></thead><tbody>
+ <tr><th>السبت</th><td>فيزياء</td><td>كيمياء</td><td>بنك أسئلة</td><td>قوانين</td></tr><tr><th>الأحد</th><td>أحياء</td><td>فيزياء</td><td>امتحان درس</td><td>ملاحظات</td></tr><tr><th>الاثنين</th><td>كيمياء</td><td>أحياء</td><td>بنك أسئلة</td><td>خريطة ذهنية</td></tr><tr><th>الثلاثاء</th><td>فيزياء</td><td>عربي</td><td>امتحان فصل</td><td>قوانين</td></tr><tr><th>الأربعاء</th><td>أحياء</td><td>كيمياء</td><td>بنك أسئلة</td><td>مراجعة أخطاء</td></tr><tr><th>الخميس</th><td>فيزياء</td><td>English</td><td>امتحان شامل</td><td>مراجعة</td></tr><tr><th>الجمعة</th><td>مراجعة خفيفة</td><td>أذكار</td><td>راحة</td><td>تخطيط الأسبوع</td></tr>
+ </tbody></table></div>
+</section>
+
+<section id="prayer" class="page">
+ <h1>🕌 الأذان ومواقيت الصلاة</h1>
+ <div class="grid">
+  <div class="card"><div class="sectionTitle"><h2>مواقيت اليوم</h2><span id="prayerDate" class="badge"></span></div><p class="muted">المواقيت تتجدد تلقائيًا حسب التاريخ. المدينة الافتراضية: القاهرة.</p><div id="prayers"></div><button class="btn secondary" onclick="loadPrayer(true)">تحديث الآن</button></div>
+  <div class="card"><h2>🔊 صوت الأذان</h2><p class="muted">تم إعداد مشغل لصوت أذان مرخّص CC0 من Wikimedia Commons. قد يحتاج المتصفح إلى ضغط تشغيل أول مرة.</p>
+   <audio id="adhanAudio" class="audio" controls preload="none" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Adhan.ogg"></audio>
+   <div class="actions"><button class="btn" onclick="playAdhan()">تشغيل الأذان</button><button class="btn secondary" onclick="testReminder()">اختبار التنبيه</button></div>
+   <div class="note green" style="margin-top:15px">ملاحظة: المتصفح قد يمنع التشغيل التلقائي للصوت حتى يتم التفاعل مع الصفحة مرة واحدة.</div>
+  </div>
+ </div>
+ <div class="card section"><h2>📿 تذكير الصلاة على النبي ﷺ</h2><p class="muted">كل 10 دقائق أثناء استخدام الصفحة سيظهر تنبيه، ويحاول المتصفح نطق التذكير صوتيًا إذا كان مسموحًا.</p><div id="reminderStatus" class="note">التذكير يعمل عند إبقاء الصفحة مفتوحة.</div></div>
+</section>
+
+<section id="notes" class="page">
+ <h1>🗒️ ملاحظاتي</h1><p class="muted">اكتبي ملحوظاتك لكل درس واحفظيها على الجهاز.</p><div id="notesList"></div>
+</section>
+
+<section id="progress" class="page">
+ <h1>📊 متابعتي</h1><div class="grid grid4">
+  <div class="card"><div class="muted">الدروس المكتملة</div><div class="num" id="pDone">0</div></div><div class="card"><div class="muted">الاختبارات</div><div class="num" id="pExams">0</div></div><div class="card"><div class="muted">المتوسط</div><div class="num" id="pAvg">0%</div></div><div class="card"><div class="muted">النقاط</div><div class="num" id="pPoints">0</div></div>
+ </div><div class="grid"><div class="card"><h2>📚 تقدم المواد</h2><div id="progressSubjects"></div></div><div class="card"><h2>⏱️ آخر 7 أيام</h2><div id="chart" class="barChart"></div></div></div>
+ <div class="card section"><h2>🏆 آخر النتائج</h2><div id="results"></div></div>
+</section>
+
+<div class="footer">👑 الدكتورة ملك • ثالثة ثانوي علمي علوم • نسخة تعليمية تجريبية قابلة للتطوير</div>
+</main></div>
+<div id="toast" class="toast"></div>
+
+<script>
+/* ============================================================
+   بيانات ثالثة ثانوي علمي علوم
+   الفهارس الأساسية أدناه مبنية على فهارس منشورة للمنهج المصري.
+   لا نضع نصوص الكتب حرفيًا؛ نستخدم شرحًا تعليميًا أصليًا مختصرًا.
+   ============================================================ */
+const DATA=[
+{id:"physics",name:"الفيزياء",icon:"⚛️",cls:"physics",desc:"الكهربية والكهرومغناطيسية والفيزياء الحديثة",chapters:[
+ {name:"الفصل الأول: التيار الكهربي وقانون أوم وقانونا كيرتشوف",intro:"فهم التيار وفرق الجهد والمقاومة وتطبيق قوانين أوم وكيرتشوف على الدوائر.",
+ lessons:[
+  ["التيار الكهربي","كمية الشحنة التي تعبر مقطعًا من موصل في وحدة الزمن.","I = Q / t","ركزي على الوحدات: الأمبير = كولوم/ثانية."],
+  ["قانون أوم والمقاومة","العلاقة بين فرق الجهد وشدة التيار والمقاومة عند ثبوت الظروف.","V = I R","استخدمي مثلث V-I-R لإعادة ترتيب القانون."],
+  ["توصيل المقاومات","حساب المقاومة المكافئة في التوالي والتوازي.","Rₛ = R₁+R₂+…","في التوازي يكون فرق الجهد متساويًا على الفروع."],
+  ["قانونا كيرتشوف","تحليل الدوائر التي تحتوي أكثر من مسار ومصدر.","ΣI = 0 ، ΣΔV = 0","حددي اتجاهات التيارات أولًا ثم طبقي القوانين."],
+  ["تطبيقات ومسائل الدوائر","تجميع قوانين الفصل في مسائل مركبة.","I = E/(R+r)","اكتبي المعطيات ثم القانون ثم التعويض ثم الوحدة."]
+ ]},
+ {name:"الفصل الثاني: التأثير المغناطيسي للتيار الكهربي وأجهزة القياس",intro:"العلاقة بين التيار والمجال المغناطيسي والقوة المغناطيسية وأجهزة القياس.",
+ lessons:[
+  ["المجال المغناطيسي لتيار مستقيم","تحديد اتجاه وشدة المجال حول موصل يمر به تيار.","B ∝ I/r","قاعدة اليد اليمنى تساعد في تحديد الاتجاه."],
+  ["القوة على سلك يمر به تيار","القوة المغناطيسية الناتجة عن وجود السلك داخل مجال.","F = B I L sinθ","تكون القوة أكبر عندما تكون الزاوية 90°."],
+  ["القوة بين سلكين متوازيين","تحديد التجاذب أو التنافر بين تيارين متوازيين.","F/L = μ₀ I₁I₂/(2πd)","تياران في نفس الاتجاه يتجاذبان."],
+  ["الجلفانومتر والأميتر والفولتميتر","تحويل أجهزة القياس وقراءة دوائرها.","V = IR","تذكري أن الأميتر يوصل على التوالي والفولتميتر على التوازي."]
+ ]},
+ {name:"الفصل الثالث: الحث الكهرومغناطيسي",intro:"فهم توليد القوة الدافعة المستحثة وقانون فاراداي وقاعدة لنز والمولدات والمحولات.",
+ lessons:[
+  ["تجربة فاراداي والحث","تغير الفيض المغناطيسي يولد قوة دافعة مستحثة.","ε ∝ ΔΦ/Δt","المهم هو التغير في الفيض وليس وجود المجال فقط."],
+  ["قانونا فاراداي","ربط القوة الدافعة بعدد اللفات ومعدل تغير الفيض.","ε = -N ΔΦ/Δt","الإشارة السالبة تعبر عن قاعدة لنز."],
+  ["قاعدة لنز","اتجاه التيار المستحث يقاوم التغير المسبب له.","Lenz: oppose the change","حددي أولًا اتجاه التغير في الفيض."],
+  ["الحث الذاتي والمتبادل","توليد قوة دافعة بسبب تغير التيار في ملف أو ملف قريب.","ε = -L ΔI/Δt","الحث الذاتي خاص بالملف نفسه والمتبادل بين ملفين."],
+  ["المولد والمحول","تحويل الطاقة الميكانيكية والكهربائية ورفع/خفض الجهد.","Vₚ/Vₛ = Nₚ/Nₛ","في المحول المثالي القدرة الداخلة تساوي الخارجة."]
+ ]},
+ {name:"الفصل الرابع: دوائر التيار المتردد",intro:"الخصائص الفعالة للتيار المتردد والمقاومة والملف والمكثف والدوائر المركبة.",
+ lessons:[
+  ["التيار المتردد والقيم الفعالة","فهم القيمة اللحظية والفعالة والتردد.","Iᵣₘₛ = I₀/√2","فرقي بين القيمة العظمى والفعالة."],
+  ["دائرة مقاومة أومية","علاقة الجهد والتيار في المقاومة مع التيار المتردد.","V = IR","الجهد والتيار متفقان في الطور."],
+  ["دائرة الملف والمكثف","المفاعلة الحثية والسعوية وتأثير التردد.","Xᴸ=ωL ، Xᶜ=1/(ωC)","زيادة التردد تزيد Xᴸ وتقلل Xᶜ."],
+  ["دوائر RLC والرنين","دراسة الممانعة والرنين في دائرة مترددة.","Z = √(R²+(Xᴸ-Xᶜ)²)","الرنين عندما Xᴸ = Xᶜ."]
+ ]},
+ {name:"الفصل الخامس: ازدواجية الموجة والجسيم",intro:"الطبيعة المزدوجة للمادة والإشعاع وتأثير الفوتونات.","lessons":[
+  ["الفوتون والطاقة","ربط طاقة الفوتون بتردده.","E = hf","التردد الأعلى يعني طاقة فوتون أكبر."],
+  ["ازدواجية دي برولي","المادة يمكن أن تظهر خواص موجية.","λ = h/p","كلما زخم الجسيم أكبر قل طول موجته."]
+ ]},
+ {name:"الفصل السادس: الأطياف الذرية",intro:"مستويات الطاقة والطيف الذري وانتقالات الإلكترونات.","lessons":[
+  ["مستويات الطاقة والطيف","الإلكترون ينتقل بين مستويات وينبعث أو يمتص فوتون.","ΔE = hf","خطوط الطيف مرتبطة بفروق مستويات الطاقة."]
+ ]},
+ {name:"الفصل السابع: الليزر",intro:"خصائص ضوء الليزر وآلية الانبعاث المحفز وتطبيقاته.","lessons":[
+  ["الليزر والانبعاث المحفز","ضوء مترابط عالي الاتجاه يعتمد على الانبعاث المحفز.","E = hf","من خصائصه الترابط وشدة الاتجاه."]
+ ]},
+ {name:"الفصل الثامن: الإلكترونيات الحديثة",intro:"أشباه الموصلات والثنائيات والترانزستور وتطبيقاتها.","lessons":[
+  ["أشباه الموصلات والثنائي","فهم المواد شبه الموصلة وسلوك الوصلة الثنائية.","I = f(V)","الثنائي يسمح بمرور التيار في اتجاه أساسي."],
+  ["الترانزستور وتطبيقاته","استخدام الترانزستور في التكبير والتحكم.","I_E = I_C + I_B","احفظي علاقة التيارات الأساسية."]
+ ]}
+]},
+{id:"chem",name:"الكيمياء",icon:"🧪",cls:"chem",desc:"عناصر انتقالية وتحليل واتزان وكهربية وعضوية",chapters:[
+ {name:"الباب الأول: العناصر الانتقالية",intro:"خصائص السلسلة الانتقالية الأولى والحديد والسبائك وأكاسيده.",lessons:[
+  ["السلسلة الانتقالية الأولى","التوزيع الإلكتروني والخواص العامة للعناصر الانتقالية.","[Ar] 3dⁿ 4s²","راجعي العلاقة بين التوزيع الإلكتروني والخواص."],
+  ["خواص السلسلة الانتقالية","الألوان والمغناطيسية والنشاط الحفزي وحالات التأكسد.","عدد التأكسد ≠ الشحنة دائمًا","قارني الخواص تدريجيًا عبر السلسلة."],
+  ["الحديد واستخلاصه","الخامات وأفران الاختزال وخطوات إنتاج الحديد.","Fe₂O₃ + 3CO → 2Fe + 3CO₂","اربطي كل منطقة في الفرن بالتفاعل المناسب."],
+  ["الحديد الصلب والسبائك","تعديل خواص الحديد بإضافة عناصر مختلفة.","خواص السبيكة تعتمد على تركيبها","احفظي أمثلة الاستخدامات مع السبب."],
+  ["خواص وأكاسيد الحديد","التفاعلات المهمة للحديد وأكاسيده.","Fe + 2HCl → FeCl₂ + H₂","ميزي بين Fe²⁺ وFe³⁺ في التفاعلات."]
+ ]},
+ {name:"الباب الثاني: التحليل الكيميائي",intro:"التحليل الوصفي والكمي للكشف عن الأيونات وحساب الكميات.",lessons:[
+  ["التحليل الكيميائي الوصفي","الكشف عن الأنيونات والكاتيونات بالملاحظات والتفاعلات.","اختبار → ملاحظة → استنتاج","ركزي على لون الراسب والغاز والذوبان."],
+  ["التحليل الكيميائي الكمي","الحسابات المرتبطة بالمعايرة والترسيب والتحليل الكمي.","n = C × V","استخدمي معادلة التفاعل قبل التعويض."]
+ ]},
+ {name:"الباب الثالث: الاتزان الكيميائي",intro:"سرعة التفاعل والاتزان والمحاليل الإلكتروليتية وتأين الماء والتحليل المائي وحاصل الإذابة.",lessons:[
+  ["معدل التفاعل الكيميائي","العوامل المؤثرة في سرعة التفاعل ونظرية التصادم.","Rate = Δconcentration/Δt","زيادة الحرارة أو التركيز قد تزيد معدل التصادمات الفعالة."],
+  ["المحاليل الإلكتروليتية","التأين وقوة الإلكتروليت والتوصيل.","α = عدد الجزيئات المتأينة/الكلية","فرقي بين الإلكتروليت القوي والضعيف."],
+  ["تأين الماء","ثابت تأين الماء وعلاقة +H و-OH.","Kᵥ = [H⁺][OH⁻]","في الماء النقي يتساوى تركيز الأيونين."],
+  ["التحليل المائي للأملاح","تفاعل أيونات الملح مع الماء وتأثيره على الوسط.","pH يعتمد على طبيعة الملح","حددي مصدر الأيون قبل الحكم على الوسط."],
+  ["حاصل الإذابة","الاتزان بين الراسب والأيونات في المحلول.","Ksp = [ion]ᵃ[ion]ᵇ","قارنة Qsp مع Ksp تساعد في توقع الترسيب."]
+ ]},
+ {name:"الباب الرابع: الكيمياء الكهربية",intro:"الخلايا الجلفانية والتآكل وقوانين فاراداي والتطبيقات.",lessons:[
+  ["الخلايا الجلفانية وإنتاج الطاقة","تحويل الطاقة الكيميائية إلى كهربائية.","E°cell = E°cathode − E°anode","الكاثود اختزال والأنود أكسدة."],
+  ["تآكل المعادن","الأكسدة الكهروكيميائية للمعادن وطرق الحماية.","Fe → Fe²⁺ + 2e⁻","العزل والطلاء والحماية الكاثودية تقلل التآكل."],
+  ["قوانين فاراداي للتحليل الكهربي","ربط كمية المادة المترسبة بكمية الكهرباء.","m ∝ It","الوحدات والزمن بالثواني مهمان."],
+  ["تطبيقات التحليل الكهربي","الطلاء والاستخلاص والتنقية.","m = ZIt","اربطي التطبيق بنوع الخلية والقطب."]
+ ]},
+ {name:"الباب الخامس: الكيمياء العضوية",intro:"المركبات العضوية والهيدروكربونات والكحولات والفينولات ومشتقاتها.",lessons:[
+  ["مقدمة في الكيمياء العضوية","مفهوم المركبات العضوية ونظرية القوى الحيوية تاريخيًا.","C أساس معظم المركبات العضوية","تعلمي قراءة الصيغ البنائية."],
+  ["الصيغ الجزيئية والبنائية","تمثيل المركبات والتمييز بين الصيغة الجزيئية والبنائية.","درجة عدم التشبع = (2C+2+N-H-X)/2","استخدميها كمؤشر مساعد."],
+  ["الهيدروكربونات الأليفاتية","الألكانات والألكينات والألكاينات وتفاعلاتها.","Alkane: CₙH₂ₙ₊₂","اربطي نوع الرابطة بالتفاعل المتوقع."],
+  ["الهيدروكربونات الحلقية","المركبات الحلقية وخواصها الأساسية.","Cycloalkane: CₙH₂ₙ","قارني الصيغة العامة بالهيدروكربونات المفتوحة."],
+  ["الكحولات والفينولات","المجموعة الهيدروكسيلية والخواص والتفاعلات.","R–OH","حددي نوع الكحول وموقع OH قبل الحل."]
+ ]}
+]},
+{id:"bio",name:"الأحياء",icon:"🧬",cls:"bio",desc:"التركيب والوظيفة والبيولوجيا الجزيئية وعلوم الأرض",chapters:[
+ {name:"الفصل الأول: الدعامة والحركة في الكائنات الحية",intro:"الدعامة والحركة في النبات والإنسان والعضلات والمفاصل.",lessons:[
+  ["الدعامة في الكائنات الحية","الدعامة التركيبية والفسيولوجية ودورها في الحفاظ على الشكل.","دعامة = شكل + ثبات + حماية","قارني بين الدعامة في النبات والإنسان."],
+  ["الحركة في الكائنات الحية","الحركة على مستوى النبات والحيوان والجهاز العضلي الهيكلي.","Actin + Myosin → contraction","ركزي على خطوات الانقباض العضلي."]
+ ]},
+ {name:"الفصل الثاني: التنسيق الهرموني",intro:"الغدد والهرمونات وآليات التغذية الراجعة والتنظيم الداخلي.",lessons:[
+  ["التنسيق الهرموني والغدة النخامية","دور الغدة النخامية والهرمونات المنظمة للغدد الأخرى.","Hormone → receptor → response","التغذية الراجعة أساس مهم في التنظيم."],
+  ["الغدة الدرقية وباقي الغدد","وظائف الهرمونات وتأثيرها في النمو والتمثيل الغذائي.","T₃/T₄ ↔ metabolism","اربطي كل غدة بالهرمونات ووظائفها."]
+ ]},
+ {name:"الفصل الثالث: التكاثر في الكائنات الحية",intro:"التكاثر اللاجنسي والجنسي وتكاثر النباتات الزهرية والتكاثر في الإنسان.",lessons:[
+  ["طرق التكاثر في الكائنات الحية","التكاثر اللاجنسي والجنسي ومقارنتهما.","Asexual: one parent","ركزي على المميزات والعيوب والأمثلة."],
+  ["التكاثر في النباتات الزهرية","الزهرة والتلقيح والإخصاب وتكوين البذور.","Pollination → fertilization → seed","رتبي مراحل دورة حياة النبات."],
+  ["التكاثر في الإنسان: قبل الإخصاب","الجهاز التناسلي وتكوين الأمشاج ودورة الطمث.","FSH / LH / estrogen / progesterone","اربطي الهرمونات بمراحل الدورة."],
+  ["الإخصاب والحمل","الإخصاب والانقسامات الأولى وتكوين الجنين.","Sperm + Ovum → Zygote","ميزي بين الإخصاب والانغراس." ]
+ ]},
+ {name:"الفصل الرابع: المناعة في الكائنات الحية",intro:"مناعة النبات ومكونات الجهاز المناعي وآليات الاستجابة المناعية.",lessons:[
+  ["المناعة في النبات","الحواجز والدفاعات الكيميائية والتركيبية في النبات.","Defense barriers","قارني الدفاعات قبل دخول الممرض وبعده."],
+  ["تركيب الجهاز المناعي في الإنسان","الأعضاء والخلايا المناعية والأجسام المضادة.","Antigen ↔ Antibody","احفظي وظيفة كل نوع من الخلايا."],
+  ["آلية عمل الجهاز المناعي","المناعة الخلطية والخلوية والاستجابة للمستضد.","B cells → antibodies","ميزي بين الأجسام المضادة والخلايا التائية السامة."]
+ ]},
+ {name:"الفصل الخامس: الحمض النووي DNA والمعلومات الوراثية",intro:"اكتشاف المادة الوراثية وتركيب DNA والتضاعف والطفرات والمحتوى الجيني.",lessons:[
+  ["جهود العلماء لمعرفة المادة الوراثية","التجارب التي دعمت أن DNA هو المادة الوراثية.","DNA → genetic information","رتبي الأدلة التاريخية من التجارب."],
+  ["تركيب DNA وتضاعفه","النيوكليوتيدات والتكامل وقاعدة الاقتران وتضاعف DNA.","A=T ، C≡G","تذكري عدد الروابط الهيدروجينية."],
+  ["DNA في أوليات وحقيقيات النواة والطفرات","تنظيم المادة الوراثية والاختلافات والطفرات.","Mutation = change in DNA","الطفرة قد تكون ضارة أو محايدة أو نافعة."]
+ ]},
+ {name:"الفصل السادس: الأحماض النووية وتخليق البروتين",intro:"RNA والنسخ والترجمة والتعبير الجيني والهندسة الوراثية.",lessons:[
+  ["RNA وتخليق البروتين","النسخ والترجمة ودور أنواع RNA.","DNA → RNA → Protein","اربطي كل نوع RNA بوظيفته."],
+  ["التكنولوجيا الجزيئية والهندسة الوراثية","أدوات وتطبيقات التعديل الجيني والتقنيات الحيوية.","Gene → product","ركزي على خطوات العزل والقطع والربط والنقل."]
+ ]},
+ {name:"الفصل السابع: الأحياء وعلوم الأرض",intro:"المفاهيم المرتبطة بعلوم الأرض والعمليات الجيولوجية في الجزء المقرر.",lessons:[
+  ["الأحياء وعلوم الأرض","ربط العمليات الحيوية والبيئية بمفاهيم علوم الأرض.","System → interaction → change","راجعي المصطلحات والرسوم التخطيطية الخاصة بالجزء المقرر."]
+ ]}
+]},
+{id:"arabic",name:"اللغة العربية",icon:"📖",cls:"arabic",desc:"مسار أساسي مساند",chapters:[
+ {name:"النحو",intro:"مراجعة مركزة للقواعد والإعراب.",lessons:[["المرفوعات","تحديد المبتدأ والفاعل ونائب الفاعل.","المبتدأ والخبر مرفوعان","ابدئي بتحديد العامل."],["المنصوبات","المفعول به والحال والتمييز وغيرها.","المفعول به منصوب","اسألي: وقع الفعل على ماذا؟"],["المجرورات","المضاف إليه والاسم بعد حرف الجر.","حرف الجر + اسم مجرور","راجعي علامات الجر."],["الأساليب","الشرط والنفي والاستفهام والتعجب وغيرها.","إذا الشرطية → جملة شرطية","حددي أداة الأسلوب أولًا."]]},
+ {name:"القراءة والبلاغة",intro:"الفكرة العامة والصور البيانية والأساليب.",lessons:[["فهم المقروء","استخراج الفكرة والدليل والاستنتاج.","سؤال → دليل من النص","لا تعتمدي على التخمين."],["البلاغة","التشبيه والاستعارة والكناية والمحسنات.","مشبه + أداة + مشبه به","ابحثي عن أداة التشبيه أو القرينة."]]}
+]},
+{id:"english",name:"English",icon:"🇬🇧",cls:"english",desc:"مسار أساسي مساند",chapters:[
+ {name:"Grammar & Reading",intro:"قواعد ومهارات قراءة وتطبيق.",lessons:[["Tenses","Present/Past/Future والاستخدام في السياق.","Subject + verb","حددي الزمن من الكلمات الدالة."],["Conditionals & Modals","الشرط والأفعال الناقصة.","If + condition → result","راجعي نوع الشرط قبل الاختيار."],["Reading skills","keywords, main idea, inference.","Read → Find → Answer","الدليل داخل النص هو الأساس."]]}
+]}
+];
+
+const Q=(q,answers,c)=>({q,a:answers,c});
+const QUESTIONS={
+"physics-0-0":[Q("إذا مرت شحنة 60 C خلال 20 s، فما شدة التيار؟",["1 A","3 A","20 A","80 A"],1),Q("وحدة شدة التيار؟",["فولت","أوم","أمبير","جول"],2)],
+"physics-0-1":[Q("إذا V=12V وR=4Ω فإن I؟",["3 A","8 A","16 A","48 A"],0),Q("قانون أوم؟",["V=IR","P=VI","Q=It","E=hf"],0)],
+"physics-0-2":[Q("مقاومتان 2Ω و3Ω على التوالي، المكافئة؟",["1Ω","5Ω","6Ω","2.5Ω"],1)],
+"physics-0-3":[Q("قانون كيرتشوف الأول مرتبط بحفظ؟",["الكتلة","الشحنة","الطاقة الحرارية","الزمن"],1)],
+"physics-1-0":[Q("اتجاه المجال حول سلك مستقيم يحدد باستخدام؟",["قاعدة اليد اليمنى","قانون أوم","قاعدة لنز","قانون فاراداي"],0)],
+"physics-1-1":[Q("أكبر قوة مغناطيسية على سلك عندما θ؟",["0°","30°","60°","90°"],3)],
+"physics-2-1":[Q("قانون فاراداي يرتبط بـ؟",["تغير الفيض","الكتلة","الحرارة","الضغط"],0)],
+"physics-3-2":[Q("المفاعلة الحثية Xᴸ تزداد مع؟",["انخفاض التردد","زيادة التردد","انعدام L","انعدام C"],1)],
+"physics-4-0":[Q("طاقة الفوتون تساوي؟",["E=hf","E=mc","V=IR","F=ma"],0)],
+"chem-0-0":[Q("العناصر الانتقالية ترتبط غالبًا بامتلاء جزئي لـ؟",["s","p","d","f"],2)],
+"chem-0-2":[Q("أحد خامات الحديد؟",["الهيماتيت","الجرافيت","الهاليت","الكوارتز"],0)],
+"chem-1-0":[Q("التحليل الوصفي يهتم أساسًا بـ؟",["تحديد النوع","قياس الزمن","حساب السرعة فقط","الطاقة"],0)],
+"chem-1-1":[Q("إذا C=0.5 mol/L وV=2L، عدد المولات؟",["0.25","1","2.5","4"],1)],
+"chem-2-0":[Q("زيادة درجة الحرارة غالبًا تؤثر في معدل التفاعل عبر؟",["زيادة التصادمات الفعالة","إلغاء التصادمات","إيقاف الحركة","تغيير الكتلة"],0)],
+"chem-2-2":[Q("في الماء النقي عند 25°C، [H⁺] و[OH⁻]؟",["متساويان","أحدهما صفر","أحدهما ضعف الآخر","لا علاقة"],0)],
+"chem-3-0":[Q("في الخلية الجلفانية يحدث الاختزال عند؟",["الأنود","الكاثود","الجسر الملحي","السلك فقط"],1)],
+"chem-3-2":[Q("قوانين فاراداي تربط الكتلة المترسبة بـ؟",["كمية الكهرباء","الضغط","الحجم فقط","درجة الغليان"],0)],
+"chem-4-2":[Q("الصيغة العامة للألكانات المفتوحة؟",["CₙH₂ₙ₊₂","CₙH₂ₙ","CₙH₂ₙ₋₂","CₙHₙ"],0)],
+"chem-4-4":[Q("المجموعة الوظيفية للكحولات؟",["–OH","–COOH","–CHO","–CO–"],0)],
+"bio-0-0":[Q("الدعامة التي تعتمد على ضغط الماء في الخلايا النباتية تسمى؟",["فسيولوجية","هيكلية فقط","عظمية","عضلية"],0)],
+"bio-0-1":[Q("البروتينان الأساسيان في انقباض العضلات؟",["Actin & Myosin","DNA & RNA","Insulin & Glucagon","Keratin & Collagen"],0)],
+"bio-1-0":[Q("الهرمونات تنتقل لتؤثر في خلايا تمتلك؟",["مستقبلات مناسبة","جدارًا خلويًا فقط","DNA فقط","ريبوسومات فقط"],0)],
+"bio-2-1":[Q("اتحاد المشيجين ينتج؟",["زيجوت","بويضة","حيوان منوي","بذرة"],0)],
+"bio-2-2":[Q("هرمون LH له دور مهم في؟",["الإباضة","الهضم","التنفس","تكوين العظم فقط"],0)],
+"bio-3-1":[Q("الأجسام المضادة تنتجها؟",["خلايا B","خلايا T السامة فقط","كريات الدم الحمراء","الصفائح"],0)],
+"bio-4-1":[Q("في DNA ترتبط A مع؟",["T","C","G","U"],0)],
+"bio-5-0":[Q("المسار الأساسي للتعبير الجيني؟",["DNA→RNA→Protein","Protein→RNA→DNA","RNA→DNA فقط","DNA→Protein فقط"],0)],
+"bio-5-1":[Q("الهندسة الوراثية تتعامل مع؟",["المادة الوراثية","العظام فقط","الدم فقط","الدهون فقط"],0)]
+};
+function key(s,c,l){return s.id+"-"+c+"-"+l}
+function questionsFor(s,c,l){
+ let custom=QUESTIONS[key(s,c,l)]||[];
+ let lesson=s.chapters[c].lessons[l];
+ let generic=[
+  Q("أي عبارة أقرب لفكرة الدرس؟",[lesson[1],"لا توجد علاقة بالموضوع","موضوع مختلف تمامًا","إجابة غير علمية"],0),
+  Q("أفضل طريقة لمراجعة هذا الدرس؟",["فهم الفكرة ثم تطبيقها","حفظ الإجابة دون فهم","ترك القوانين","عدم حل أسئلة"],0)
+ ];
+ return [...custom,...generic];
+}
+
+/* حالة التطبيق */
+let state=JSON.parse(localStorage.getItem("malak3Bio")||"null")||{done:[],minutes:0,sessions:0,points:0,notes:{},results:[],daily:{},lessonMinutes:{}};
+function save(){localStorage.setItem("malak3Bio",JSON.stringify(state));updateStats()}
+function toast(t){const e=document.getElementById("toast");e.textContent=t;e.style.display="block";clearTimeout(window.toastT);window.toastT=setTimeout(()=>e.style.display="none",2400)}
+function toggleSide(){document.getElementById("sidebar").classList.toggle("open")}
+function showPage(id){
+ document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));document.getElementById(id).classList.add("active");
+ document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.page===id));document.getElementById("sidebar").classList.remove("open");
+ if(id==="home")renderHome();if(id==="subjects")renderSubjects();if(id==="chapters")renderChapters();if(id==="laws")renderLaws();if(id==="maps")renderMaps();if(id==="bank")initBank();if(id==="exams")renderExams();if(id==="timer"){fillTimer();renderTimerStats()}if(id==="notes")renderNotes();if(id==="progress")renderProgress();if(id==="prayer")loadPrayer();
+}
+document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>showPage(b.dataset.page));
+
+function subjectCard(s){
+ let total=s.chapters.reduce((n,c)=>n+c.lessons.length,0),done=s.chapters.reduce((n,c,ci)=>n+c.lessons.filter((_,li)=>state.done.includes(key(s,ci,li))).length,0),p=Math.round(done/total*100);
+ return `<div class="card subject ${s.cls}"><div class="subjectIcon">${s.icon}</div><h2>${s.name}</h2><p>${s.desc}</p><div class="progress"><i style="width:${p}%"></i></div><p class="small">${done}/${total} درس • ${p}%</p><button class="btn" onclick="openChapters('${s.id}')">فتح المادة</button></div>`;
+}
+function renderHome(){document.getElementById("homeSubjects").innerHTML=DATA.map(subjectCard).join("");updateStats()}
+function renderSubjects(){document.getElementById("subjectGrid").innerHTML=DATA.map(subjectCard).join("")}
+
+function openChapters(id){showPage("chapters");document.getElementById("chapterTabs").querySelector(`[data-id="${id}"]`)?.click()}
+function renderChapters(){
+ let tabs=document.getElementById("chapterTabs");tabs.innerHTML=DATA.map((s,i)=>`<button data-id="${s.id}" class="${i===0?"active":""}" onclick="chapterTab(this,'${s.id}')">${s.icon} ${s.name}</button>`).join("");chapterTab(tabs.firstElementChild,DATA[0].id)
+}
+function chapterTab(btn,id){
+ document.querySelectorAll("#chapterTabs button").forEach(x=>x.classList.remove("active"));btn.classList.add("active");
+ let s=DATA.find(x=>x.id===id);
+ document.getElementById("chapterList").innerHTML=s.chapters.map((c,ci)=>`<div class="chapter"><div class="chapterHead"><div><div class="chapterTitle">${c.name}</div><div class="muted small">${c.intro}</div></div><span class="tag">${c.lessons.length} دروس</span></div><div class="chapterBody">${c.lessons.map((l,li)=>lessonRow(s,ci,li,l)).join("")}</div></div>`).join("");
+}
+function lessonRow(s,ci,li,l){
+ let k=key(s,ci,li),done=state.done.includes(k);return `<div class="lessonRow"><div class="lessonLeft"><div class="lessonNo">${done?"✓":li+1}</div><div><b>${l[0]}</b><div class="muted small">${l[1]}</div></div></div><div class="actions"><button class="btn secondary" onclick="openLesson('${s.id}',${ci},${li})">فتح الدرس</button>${done?'<span class="done">مكتمل</span>':''}</div></div>`;
+}
+function openLesson(sid,ci,li){
+ let s=DATA.find(x=>x.id===sid),l=s.chapters[ci].lessons[li],k=key(s,ci,li),qs=questionsFor(s,ci,li);
+ document.getElementById("chapterList").innerHTML=`<div class="card"><span class="tag">${s.icon} ${s.name} • ${s.chapters[ci].name}</span><h2>${l[0]}</h2><p class="explain">${l[1]}</p><h3>⚗️ القانون / القاعدة</h3><div class="law">${l[2]}</div><div class="note blue"><b>💡 ملاحظة مهمة:</b> ${l[3]}</div><h3 style="margin-top:18px">📌 خطوات مذاكرة الدرس</h3><ol><li>اقرئي الفكرة العامة.</li><li>اكتبي القانون أو المصطلحات الأساسية.</li><li>حلي أسئلة الدرس.</li><li>اعملي امتحان الدرس.</li><li>سجلي الأخطاء في ملاحظاتك.</li></ol><h3>🗒️ ملاحظتك</h3><textarea id="lessonNote" class="noteInput" placeholder="اكتبي ملحوظاتك هنا...">${esc(state.notes[k]||"")}</textarea><div class="actions"><button class="btn secondary" onclick="saveLessonNote('${k}')">حفظ الملاحظة</button><button class="btn green" onclick="complete('${k}')">${state.done.includes(k)?"✓ مكتمل":"تسجيل كمكتمل +10"}</button><button class="btn" onclick="startLessonExam('${sid}',${ci},${li})">📝 امتحان الدرس</button><button class="btn secondary" onclick="chooseTimer('${k}')">⏱️ ذاكر بهذا الدرس</button></div><hr><h3>📝 أسئلة سريعة</h3>${qs.map((q,i)=>`<div class="card" style="margin:9px 0"><b>${i+1}. ${q.q}</b>${q.a.map(a=>`<div class="muted small" style="margin:5px 0">• ${a}</div>`).join("")}</div>`).join("")}</div>`;
+ window.scrollTo({top:0,behavior:"smooth"});
+}
+function esc(x){return String(x).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
+function saveLessonNote(k){let v=document.getElementById("lessonNote").value.trim();if(v)state.notes[k]=v;else delete state.notes[k];save();toast("تم حفظ الملاحظة 🗒️")}
+function complete(k){if(!state.done.includes(k)){state.done.push(k);state.points+=10;save();toast("تم إكمال الدرس +10 نقاط 🎉")}else toast("الدرس مكتمل بالفعل")}
+function chooseTimer(k){timer.lesson=k;showPage("timer");fillTimer();document.getElementById("timerLesson").value=k;toast("تم اختيار الدرس للمؤقت")}
+
+function renderLaws(){
+ let tabs=document.getElementById("lawTabs");tabs.innerHTML=DATA.map((s,i)=>`<button class="${i===0?"active":""}" onclick="lawTab(this,'${s.id}')">${s.icon} ${s.name}</button>`).join("");lawTab(tabs.firstElementChild,DATA[0].id)
+}
+function lawTab(btn,id){document.querySelectorAll("#lawTabs button").forEach(x=>x.classList.remove("active"));btn.classList.add("active");let s=DATA.find(x=>x.id===id);document.getElementById("lawList").innerHTML=s.chapters.map(c=>`<div class="card" style="margin:10px 0"><h2>${c.name}</h2>${c.lessons.map(l=>`<div style="margin:13px 0"><b>${l[0]}</b><div class="law">${l[2]}</div></div>`).join("")}</div>`).join("")}
+
+function renderMaps(){
+ let tabs=document.getElementById("mapTabs");tabs.innerHTML=DATA.map((s,i)=>`<button class="${i===0?"active":""}" onclick="mapTab(this,'${s.id}')">${s.icon} ${s.name}</button>`).join("");mapTab(tabs.firstElementChild,DATA[0].id)
+}
+function mapTab(btn,id){document.querySelectorAll("#mapTabs button").forEach(x=>x.classList.remove("active"));btn.classList.add("active");let s=DATA.find(x=>x.id===id),names=s.chapters.slice(0,6).map(c=>c.name.replace(/^الفصل \w+:\s*|^الباب \w+:\s*/,""));document.getElementById("mind").innerHTML=`<div class="mindCenter">${s.icon}<br>${s.name}</div>${names.map((n,i)=>`<div class="node n${i+1}">${n}</div>`).join("")}`}
+
+function initBank(){
+ let ss=document.getElementById("bankSubject");ss.innerHTML=DATA.map(s=>`<option value="${s.id}">${s.name}</option>`).join("");ss.onchange=fillBankChapters;document.getElementById("bankChapter").onchange=fillBankLessons;document.getElementById("bankLesson").onchange=()=>{};fillBankChapters()
+}
+function fillBankChapters(){let s=DATA.find(x=>x.id===document.getElementById("bankSubject").value),c=document.getElementById("bankChapter");c.innerHTML=s.chapters.map((x,i)=>`<option value="${i}">${x.name}</option>`).join("");fillBankLessons()}
+function fillBankLessons(){let s=DATA.find(x=>x.id===document.getElementById("bankSubject").value),ci=+document.getElementById("bankChapter").value,l=document.getElementById("bankLesson");l.innerHTML=`<option value="-1">كل دروس الفصل</option>`+s.chapters[ci].lessons.map((x,i)=>`<option value="${i}">${i+1}. ${x[0]}</option>`).join("")}
+function getBankQuestions(){let s=DATA.find(x=>x.id===document.getElementById("bankSubject").value),ci=+document.getElementById("bankChapter").value,li=+document.getElementById("bankLesson").value,arr=[];s.chapters[ci].lessons.forEach((_,i)=>{if(li<0||li===i)arr.push(...questionsFor(s,ci,i).map(q=>({...q,lesson:i+1,title:s.chapters[ci].lessons[i][0]})))});return arr}
+function randomQuestion(){let arr=getBankQuestions(),q=arr[Math.floor(Math.random()*arr.length)];document.getElementById("bankBox").innerHTML=renderQuestion(q,"bankQ");window.bankQ=q}
+function bankAll(){let arr=getBankQuestions();document.getElementById("bankBox").innerHTML=arr.map((q,i)=>`<div class="card" style="margin:9px 0"><b>${i+1}. ${q.q}</b><div class="muted small">الدرس: ${q.title}</div>${q.a.map(a=>`<div class="small muted">• ${a}</div>`).join("")}</div>`).join("")}
+function renderQuestion(q,id){return `<div class="card"><span class="tag">سؤال من بنك الأسئلة</span><h2>${q.title||""}</h2><div class="question">${q.q}</div>${q.a.map((a,i)=>`<button class="answer" onclick="bankAnswer(this,${i},${q.c})">${String.fromCharCode(65+i)} — ${a}</button>`).join("")}<div id="${id}" class="muted" style="margin-top:10px"></div></div>`}
+function bankAnswer(btn,i,c){document.querySelectorAll("#bankBox .answer").forEach(x=>x.disabled=true);btn.classList.add(i===c?"correct":"wrong");document.getElementById("bankQ").textContent=i===c?"إجابة صحيحة ✅":"الإجابة الصحيحة هي: "+String.fromCharCode(65+c)}
+
+let exam=null;
+function renderExams(){document.getElementById("examCards").innerHTML=DATA.flatMap(s=>s.chapters.map((c,ci)=>`<div class="card"><span class="tag">${s.icon} ${s.name}</span><h3>${c.name}</h3><p class="muted small">${c.lessons.length} دروس • امتحان فصل.</p><button class="btn" onclick="startChapterExam('${s.id}',${ci})">ابدئي الامتحان</button></div>`)).join("")}
+function startLessonExam(sid,ci,li){let s=DATA.find(x=>x.id===sid);exam={title:`امتحان ${s.name} — ${s.chapters[ci].lessons[li][0]}`,qs:questionsFor(s,ci,li)};runExam()}
+function startChapterExam(sid,ci){let s=DATA.find(x=>x.id===sid);exam={title:`امتحان ${s.name} — ${s.chapters[ci].name}`,qs:s.chapters[ci].lessons.flatMap((_,li)=>questionsFor(s,ci,li))};runExam()}
+function runExam(){showPage("exams");document.getElementById("examBox").classList.remove("hidden");document.getElementById("examCards").classList.add("hidden");exam.i=0;exam.answers=[];drawExam()}
+function drawExam(){let q=exam.qs[exam.i],box=document.getElementById("examBox");box.innerHTML=`<span class="tag">${exam.title}</span><p class="muted small">السؤال ${exam.i+1} من ${exam.qs.length}</p><div class="question">${q.q}</div>${q.a.map((a,i)=>`<button class="answer ${exam.answers[exam.i]===i?"selected":""}" onclick="pick(${i})">${String.fromCharCode(65+i)} — ${a}</button>`).join("")}<div class="actions">${exam.i?'<button class="btn secondary" onclick="prevQ()">السابق</button>':""}<button class="btn" onclick="${exam.i===exam.qs.length-1?"finishExam()":"nextQ()"}">${exam.i===exam.qs.length-1?"إنهاء":"التالي"}</button></div>`}
+function pick(i){exam.answers[exam.i]=i;drawExam()}function nextQ(){if(exam.answers[exam.i]===undefined)return toast("اختاري إجابة");exam.i++;drawExam()}function prevQ(){exam.i--;drawExam()}
+function finishExam(){let good=exam.qs.reduce((n,q,i)=>n+(exam.answers[i]===q.c?1:0),0),score=Math.round(good/exam.qs.length*100);state.results.unshift({title:exam.title,score,date:new Date().toLocaleDateString("ar-EG")});state.results=state.results.slice(0,30);state.points+=score;save();document.getElementById("examBox").innerHTML=`<div><div class="score">${score}%</div><h2 style="text-align:center">${score>=90?"ممتاز يا ملك 👑":score>=75?"مستوى قوي جدًا 💪":"راجعي الأخطاء وارجعي حاولي 🔁"}</h2><p style="text-align:center" class="muted">صح: ${good} من ${exam.qs.length}</p><div class="actions" style="justify-content:center"><button class="btn" onclick="runExam()">إعادة</button><button class="btn secondary" onclick="showPage('progress')">المتابعة</button></div></div>`;document.getElementById("examCards").classList.remove("hidden")}
+
+let timer={seconds:3000,running:false,interval:null,lesson:"physics-0-0"};
+function fillTimer(){let s=document.getElementById("timerLesson");s.innerHTML=DATA.flatMap(x=>x.chapters.flatMap((c,ci)=>c.lessons.map((l,li)=>`<option value="${key(x,ci,li)}">${x.name} — ${l[0]}</option>`))).join("");s.value=timer.lesson;s.onchange=e=>{timer.lesson=e.target.value;renderTimerStats()}}
+function displayTimer(){let m=Math.floor(timer.seconds/60),sec=timer.seconds%60;document.getElementById("timerDisplay").textContent=String(m).padStart(2,"0")+":"+String(sec).padStart(2,"0")}
+function preset(m){if(timer.running)return;timer.seconds=m*60;displayTimer()}
+function resetTimer(){clearInterval(timer.interval);timer.running=false;timer.seconds=3000;document.getElementById("timerBtn").textContent="ابدئي";displayTimer()}
+function toggleTimer(){if(timer.running){timer.running=false;clearInterval(timer.interval);document.getElementById("timerBtn").textContent="استئناف";return}timer.running=true;document.getElementById("timerBtn").textContent="إيقاف";timer.interval=setInterval(()=>{state.minutes+=1/60;state.lessonMinutes[timer.lesson]=(state.lessonMinutes[timer.lesson]||0)+1/60;let d=new Date().toISOString().slice(0,10);state.daily[d]=(state.daily[d]||0)+1/60;if(timer.seconds>0){timer.seconds--;displayTimer()}else{finishTimer()}if(Math.floor(state.minutes)%3===0)save();renderTimerStats();updateStats()},1000)}
+function finishTimer(){clearInterval(timer.interval);timer.running=false;state.sessions++;state.points+=5;save();timer.seconds=3000;displayTimer();document.getElementById("timerBtn").textContent="ابدئي";toast("انتهت الجلسة +5 نقاط 🎉")}
+function renderTimerStats(){document.getElementById("timerTotal").textContent=Math.floor(state.minutes)+" دقيقة";document.getElementById("timerSessions").textContent=state.sessions;document.getElementById("lessonTime").textContent=Math.floor(state.lessonMinutes[timer.lesson]||0)+" دقيقة";displayTimer()}
+
+function renderNotes(){let arr=Object.entries(state.notes);document.getElementById("notesList").innerHTML=arr.length?arr.map(([k,v])=>{let [sid,ci,li]=k.split("-"),s=DATA.find(x=>x.id===sid),l=s.chapters[+ci].lessons[+li];return `<div class="card" style="margin:9px 0"><span class="tag">${s.name}</span><h3>${l[0]}</h3><p>${esc(v)}</p><button class="btn secondary" onclick="openLesson('${sid}',${ci},${li})">فتح الدرس</button></div>`}).join(""):"<div class='card'><p class='muted'>مفيش ملاحظات لسه.</p></div>"}
+
+function renderProgress(){updateStats();document.getElementById("progressSubjects").innerHTML=DATA.map(s=>{let total=s.chapters.reduce((n,c)=>n+c.lessons.length,0),done=s.chapters.reduce((n,c,ci)=>n+c.lessons.filter((_,li)=>state.done.includes(key(s,ci,li))).length,0),p=Math.round(done/total*100);return `<div style="margin:12px 0"><div class="stat"><span>${s.icon} ${s.name}</span><b>${p}%</b></div><div class="progress"><i style="width:${p}%"></i></div></div>`}).join("");let today=new Date(),a=[];for(let i=6;i>=0;i--){let d=new Date(today);d.setDate(today.getDate()-i);let k=d.toISOString().slice(0,10);a.push({m:Math.floor(state.daily[k]||0),l:["أح","إث","ثلا","أر","خم","جم","سب"][d.getDay()]})}document.getElementById("chart").innerHTML=a.map(x=>`<div class="bar" style="height:${Math.max(5,Math.min(150,x.m*2))}px"><span>${x.l}</span></div>`).join("");document.getElementById("results").innerHTML=state.results.length?state.results.map(r=>`<div class="lessonRow"><b>${r.title}</b><span class="tag">${r.score}% • ${r.date}</span></div>`).join(""):"<p class='muted'>لسه مفيش نتائج.</p>"}
+
+function updateStats(){
+ let total=DATA.reduce((n,s)=>n+s.chapters.reduce((a,c)=>a+c.lessons.length,0),0),done=state.done.length,p=Math.round(done/total*100),avg=state.results.length?Math.round(state.results.reduce((a,r)=>a+r.score,0)/state.results.length):0;
+ const set=(id,v)=>{let e=document.getElementById(id);if(e)e.textContent=v};set("sMinutes",Math.floor(state.minutes)+" د");set("sDone",done);set("sAvg",avg+"%");set("sPercent",p+"%");set("pDone",done);set("pExams",state.results.length);set("pAvg",avg+"%");set("pPoints",state.points);let today=state.daily[new Date().toISOString().slice(0,10)]||0;set("todayMinutes",Math.floor(today)+" دقيقة");let bar=document.getElementById("todayBar");if(bar)bar.style.width=Math.min(100,today/120*100)+"%";
+}
+const quotes=["كل سؤال بتحليه النهارده بيقربك من الدرجة اللي نفسك فيها.","الدرجة العالية مش حظ؛ هي تراكم جلسات صغيرة.","افهمي الفكرة، طبقي عليها، وبعدها اختبري نفسك.","ما تسيبيش الغلطة تعدي من غير ما تعرفي سببها.","صلي على النبي ﷺ وابدئي صفحة جديدة ❤️"];document.getElementById("dailyQuote").textContent=quotes[new Date().getDate()%quotes.length];
+
+/* البحث */
+document.getElementById("search").addEventListener("input",e=>{let q=e.target.value.trim().toLowerCase();if(!q)return;let hits=[];DATA.forEach(s=>s.chapters.forEach((c,ci)=>c.lessons.forEach((l,li)=>{if((s.name+" "+c.name+" "+l[0]+" "+l[1]+" "+l[2]).toLowerCase().includes(q))hits.push({s,ci,li,l})})));if(hits.length){showPage("chapters");document.getElementById("chapterList").innerHTML=`<div class="card"><h2>🔎 نتائج البحث</h2>${hits.map(x=>`<div class="lessonRow"><div><b>${x.s.name} — ${x.l[0]}</b><div class="muted small">${x.l[1]}</div></div><button class="btn secondary" onclick="openLesson('${x.s.id}',${x.ci},${x.li})">فتح</button></div>`).join("")}</div>`}});
+
+/* مواقيت الصلاة: API يومي + fallback. */
+let prayerData=null;
+async function loadPrayer(force=false){
+ let date=new Date(),dd=String(date.getDate()).padStart(2,"0"),mm=String(date.getMonth()+1).padStart(2,"0"),yyyy=date.getFullYear();
+ document.getElementById("prayerDate").textContent=`${dd}/${mm}/${yyyy}`;
+ try{
+  let r=await fetch(`https://api.aladhan.com/v1/timingsByCity/${dd}-${mm}-${yyyy}?city=Cairo&country=Egypt&method=5`);let j=await r.json();if(j.code!==200)throw Error();
+  let t=j.data.timings;prayerData={Fajr:t.Fajr,Sunrise:t.Sunrise,Dhuhr:t.Dhuhr,Asr:t.Asr,Maghrib:t.Maghrib,Isha:t.Isha};renderPrayers();if(force)toast("تم تحديث مواقيت الصلاة اليوم 🕌");
+ }catch(e){prayerData={Fajr:"05:06",Sunrise:"06:35",Dhuhr:"12:53",Asr:"16:25",Maghrib:"19:10",Isha:"20:29"};renderPrayers();if(force)toast("تعذر الاتصال بالمصدر؛ تم استخدام مواقيت احتياطية")}
+}
+function renderPrayers(){
+ let names={Fajr:"الفجر",Sunrise:"الشروق",Dhuhr:"الظهر",Asr:"العصر",Maghrib:"المغرب",Isha:"العشاء"},now=new Date(),next=null;
+ let rows=Object.entries(prayerData).map(([k,v])=>{let [h,m]=v.split(":").map(Number),d=new Date();d.setHours(h,m,0,0);if(k!=="Sunrise"&&!next&&d>now)next={k,v};return `<div class="prayerRow ${next&&next.k===k?"next":""}"><b>${k==="Sunrise"?"🌅":"🕌"} ${names[k]}</b><span>${v}</span></div>`}).join("");
+ document.getElementById("prayers").innerHTML=rows;document.getElementById("nextPrayerHome").textContent=next?`الصلاة القادمة: ${names[next.k]} — ${next.v}`:"تمت كل صلوات اليوم، ربنا يتقبل ❤️";
+}
+function playAdhan(){document.getElementById("adhanAudio").play().catch(()=>toast("اضغطي تشغيل من مشغل الصوت أول مرة"))}
+function testReminder(){speakReminder();toast("تم اختبار التذكير ❤️")}
+function speakReminder(){if("speechSynthesis" in window){let u=new SpeechSynthesisUtterance("صل على النبي صلى الله عليه وسلم");u.lang="ar-SA";u.rate=.85;window.speechSynthesis.cancel();window.speechSynthesis.speak(u)}else toast("المتصفح لا يدعم النطق الصوتي")}
+setInterval(()=>{let d=new Date();if(d.getMinutes()%10===0&&d.getSeconds()<2)speakReminder()},1000);
+
+/* تحديث المواقيت عند بداية اليوم */
+setInterval(()=>{if(new Date().getHours()===0&&new Date().getMinutes()===1)loadPrayer()},60000);
+
+/* تشغيل */
+document.addEventListener("visibilitychange",()=>{if(!document.hidden)updateStats()});
+renderHome();renderSubjects();renderChapters();renderLaws();renderMaps();renderExams();initBank();fillTimer();renderTimerStats();renderProgress();renderNotes();loadPrayer();updateStats();
+</script>
+</body>
+</html>
